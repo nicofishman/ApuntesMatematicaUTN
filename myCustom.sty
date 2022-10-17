@@ -1,0 +1,38 @@
+\ProvidesPackage{myCustom}
+
+\usepackage[utf8]{inputenc}
+\usepackage[margin=1.25in]{geometry}
+\usepackage{amsmath, amssymb}
+\usepackage{graphicx}
+\usepackage{fancyvrb}
+\usepackage{tcolorbox}
+\usepackage{tikz,lipsum,lmodern}
+\usepackage{breqn}
+\usetikzlibrary{arrows,calc,patterns,angles,quotes}    
+\tikzset{mynode/.style={inner sep=2pt,fill,outer sep=0,circle}}
+\graphicspath{ {./img/} }
+
+
+
+\newcommand{\R}{{\mathbb{R}}}
+\newcommand{\Q}{{\mathbb{Q}}}
+\newcommand{\Z}{{\mathbb{Z}}}
+\newcommand{\N}{{\mathbb{N}}}
+\newcommand{\myparagraph}[1]{\paragraph{#1}\mbox{}\\}
+\newcommand\Chapter[2]{
+    \chapter*{#1\hfil\hbox{}\protect\linebreak{\itshape#2}}
+}
+
+\newcommand{\blueBox}[2]{
+    \begin{tcolorbox}[colback=blue!5!white,colframe=blue!50!black,
+        colbacktitle=blue!75!black,title={#1}]
+        #2
+    \end{tcolorbox}
+}
+
+\newcommand{\yellowBox}[2]{
+    \begin{tcolorbox}[colback=yellow!5!white,colframe=yellow!50!black,
+        colbacktitle=yellow!75!black,title={#1}]
+        #2
+    \end{tcolorbox}
+}
