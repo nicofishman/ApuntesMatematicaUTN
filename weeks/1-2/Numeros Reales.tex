@@ -137,20 +137,20 @@ $$A \cap B = \{x: x \in A \wedge x \in B\}$$
 }
 
 \paragraph{Propiedades de la suma:}
-\begin{itemize}
-    \item[1.] (Asociatividad): $\forall \: a, b, c \in \R \Rightarrow a + (b + c) = (a + b) + c$
-    \item[2.] (Comutatividad): $\forall \: a, b \in \R \Rightarrow a + b = b + a$
-    \item[3.] (Existencia del elemento neutro) $\exists \: 0 \in \R \text{ tal que } \forall \: a \in \R \Rightarrow a + 0 = a$
-    \item[4.] (Existencia de opuestos) $\forall \: a \in \R \: \exists \: -a \in \R \text{ tal que } a + (-a) = 0$   
-\end{itemize}
+\begin{enumerate}
+    \item (Asociatividad): $\forall \: a, b, c \in \R \Rightarrow a + (b + c) = (a + b) + c$
+    \item (Comutatividad): $\forall \: a, b \in \R \Rightarrow a + b = b + a$
+    \item (Existencia del elemento neutro) $\exists \: 0 \in \R \text{ tal que } \forall \: a \in \R \Rightarrow a + 0 = a$
+    \item (Existencia de opuestos) $\forall \: a \in \R \: \exists \: -a \in \R \text{ tal que } a + (-a) = 0$   
+\end{enumerate}
 
 \paragraph{Propiedades de la multiplicación:}
-\begin{itemize}
-    \item[1.] (Asociatividad): $\forall \: a, b, c \in \R \Rightarrow a \cdot (b \cdot c) = (a \cdot b) \cdot c$
-    \item[2.] (Comutatividad): $\forall \: a, b \in \R \Rightarrow a \cdot b = b \cdot a$
-    \item[3.] (Existencia del identidad) $\exists \: 1 \in \R \text{ tal que } \forall \: a \in \R \Rightarrow a \cdot 1 = a$
-    \item[4.] (Existencia de inverso multiplicativo) $\forall \: a \in \R-\{0\} \; \exists \; a^{-1} \in \R \text{ tal que } a \cdot a^{-1} = 1$
-\end{itemize} 
+\begin{enumerate}
+    \item (Asociatividad): $\forall \: a, b, c \in \R \Rightarrow a \cdot (b \cdot c) = (a \cdot b) \cdot c$
+    \item (Comutatividad): $\forall \: a, b \in \R \Rightarrow a \cdot b = b \cdot a$
+    \item (Existencia del identidad) $\exists \: 1 \in \R \text{ tal que } \forall \: a \in \R \Rightarrow a \cdot 1 = a$
+    \item (Existencia de inverso multiplicativo) $\forall \: a \in \R-\{0\} \; \exists \; a^{-1} \in \R \text{ tal que } a \cdot a^{-1} = 1$
+\end{enumerate} 
 
 \myparagraph{Propiedad distributiva de la multiplicación respecto de la suma:}
 $\forall \: a, b, c \in \R$:
@@ -186,7 +186,7 @@ $$a \cdot (b+c) = a \cdot b + a \cdot c$$
     Dado un número real \emph{x} se llama \emph{valor absoluto} de \emph{x} al número real $|x|$ tal que:
     $$
     |x| = \begin{cases}
-             x & \text{si } x \geq 0 \\
+            \phantom{-}x & \text{si } x \geq 0 \\
             -x & \text{si } x < 0
     \end{cases}
     $$
@@ -195,14 +195,14 @@ $$a \cdot (b+c) = a \cdot b + a \cdot c$$
 
 \blueBox{Propiedades - valor absoluto}{
     Sean $a, b \in \R$ y $k > 0$:
-    \begin{itemize}
-        \item[1.] $|a| \geq 0$
-        \item[2.] $|a \cdot b| = |a| \cdot |b|$
-        \item[3.] $|a| = |-a|$
-        \item[4.] $|a| \leq k \; \text{equivale a} \; -k \leq a \; \leq k$
-        \item[5.] $|a| \geq k \; \text{equivale a} \; a \leq -k \; \text{o bien} \; k \leq a$
-        \item[6.] $|a+b| \leq |a| + |b|$ (desiguldad triangular)
-    \end{itemize}
+    \begin{enumerate}
+        \item $|a| \geq 0$
+        \item $|a \cdot b| = |a| \cdot |b|$
+        \item $|a| = |-a|$
+        \item $|a| \leq k \; \text{equivale a} \; -k \leq a \; \leq k$
+        \item $|a| \geq k \; \text{equivale a} \; a \leq -k \; \text{o bien} \; k \leq a$
+        \item $|a+b| \leq |a| + |b|$ (desiguldad triangular)
+    \end{enumerate}
 }
 
 \section{Exponentes y raíces}
@@ -212,13 +212,13 @@ Cualquier número real $a$ y cualquier número natural $n$ se define la potencia
 
 \blueBox{Propiedades - Potenciación}{
     Dados $a, b \in \R$ y $n, m \in \N$:
-    \begin{itemize}
-        \item[1.]{$a^m \cdot a^n = a^{m+n}$  (Producto de potencias de igual base)}
-        \item[2.] {$\text{\Large $\frac{a^m}{a^n}$} = a^{m-n}$ (Cociente d epotencias de igual base ($a \neq 0$))} 
-        \item[3.] {$(a^m)^n = a^{m \cdot n}$ (Potencia de potencia)}
-        \item[4.] {$(a \cdot b)^n = a^n \cdot b^n$ (La potenciación es distributiva respecto de la multiplicación)}
-        \item[5.] {$\text{\Large $\bigl(\frac{a}{b} \bigr)$}^n = \text{\Large $\frac{a^n}{b^n}$} \; \; b \neq 0$ (La potenciación es distributiva respecto de la división)}
-    \end{itemize}
+    \begin{enumerate}
+        \item {$a^m \cdot a^n = a^{m+n}$  (Producto de potencias de igual base)}
+        \item {$\text{\Large $\frac{a^m}{a^n}$} = a^{m-n}$ (Cociente d epotencias de igual base ($a \neq 0$))} 
+        \item {$(a^m)^n = a^{m \cdot n}$ (Potencia de potencia)}
+        \item {$(a \cdot b)^n = a^n \cdot b^n$ (La potenciación es distributiva respecto de la multiplicación)}
+        \item {$\text{\Large $\bigl(\frac{a}{b} \bigr)$}^n = \text{\Large $\frac{a^n}{b^n}$} \; \; b \neq 0$ (La potenciación es distributiva respecto de la división)}
+    \end{enumerate}
 }
 
 \myparagraph{Radicación}
@@ -231,11 +231,11 @@ Dado un número real $a \geq 0$, el símbolo $\sqrt{a}$ denota al único número
 }
 
 \blueBox{Propiedades - radicación}{
-    \begin{itemize}
-        \item [1.] $\sqrt[n]{a \cdot b} = \sqrt[n]{a} \cdot \sqrt[n]{b}$ (a y b deben ser no negativos en el caso n par)
-        \item [2.] $\text{\Large $\sqrt[n]{\frac{a}{b}}$} = \text{\Large $\frac{\sqrt[n]{a}}{\sqrt[n]{b}}$}$ (a y b deben ser no negativos en el caso n par, además b debe ser, en cualquier caso, distinto de 0)
-        \item [3.] $\sqrt[n]{\sqrt[m]{a}} = \sqrt[n \cdot m]{a}$ (a debe ser no negativo si n o m fuesen pares)
-    \end{itemize} 
+    \begin{enumerate}
+        \item $\sqrt[n]{a \cdot b} = \sqrt[n]{a} \cdot \sqrt[n]{b}$ (a y b deben ser no negativos en el caso n par)
+        \item $\text{\Large $\sqrt[n]{\frac{a}{b}}$} = \text{\Large $\frac{\sqrt[n]{a}}{\sqrt[n]{b}}$}$ (a y b deben ser no negativos en el caso n par, además b debe ser, en cualquier caso, distinto de 0)
+        \item $\sqrt[n]{\sqrt[m]{a}} = \sqrt[n \cdot m]{a}$ (a debe ser no negativo si n o m fuesen pares)
+    \end{enumerate} 
 }
 
 $$a^{\frac{m}{n}} = \sqrt[n]{m}$$
@@ -298,11 +298,11 @@ $$\frac{1}{\sqrt[3]{12}} = \frac{1}{\sqrt[3]{2^2 \cdot 3}} = \frac{1}{\sqrt[3]{2
 \end{itemize}
 
 \blueBox{Propiedades}{
-    \begin{itemize}
-        \item [1.] (Desigualdad triangular) La suma de los dos lados menores de un triángulo es mayor que el lado mayor.
+    \begin{enumerate}
+        \item (Desigualdad triangular) La suma de los dos lados menores de un triángulo es mayor que el lado mayor.
         $$\overline{AB} + \overline{BC} > \overline{AC}$$
-        \item[2.] En todo tríangulo, a mayor lado se opone mayor ángulo
-    \end{itemize}
+        \item En todo tríangulo, a mayor lado se opone mayor ángulo
+    \end{enumerate}
 }
 
 \noindent
@@ -327,11 +327,11 @@ $$\boxed{A = \frac{(B+b)\cdot h}{2}}$$
 
 \emph{Paralelogramo:} Cuadrilátero con dos pares de lados paralelos.\\
 \blueBox{Propiedades de los paralelogramos}{
-    \begin{itemize}
-        \item [1.] Los lados opuestos de un paralelogramo son congruentes
-        \item [2.] Los ángulos opuestos de un paralelogramo son congruentes
-        \item [3.] las diagoales de un paralelogramo se cortan en sus puntos medios.
-    \end{itemize}
+    \begin{enumerate}
+        \item Los lados opuestos de un paralelogramo son congruentes
+        \item Los ángulos opuestos de un paralelogramo son congruentes
+        \item las diagoales de un paralelogramo se cortan en sus puntos medios.
+    \end{enumerate}
 }
 $$\boxed{A = B \cdot h}$$
 \begin{center}
@@ -343,10 +343,10 @@ $$\boxed{A = B \cdot h}$$
 
 \noindent \emph{Rombo:} Paralelogramo que tiene todos sus lados iguales. A las propiedades anteriores se le agrega:
 \blueBox{Propiedades del rombo}{
-    \begin{itemize}
-        \item [1.] Las diagonales del rombo son perpendiculares entre sí (forman ángulos rectos)
-        \item [2.] Las diagonales del rombo son bisectrices de los ángulos que unen
-    \end{itemize}
+    \begin{enumerate}
+        \item Las diagonales del rombo son perpendiculares entre sí (forman ángulos rectos)
+        \item Las diagonales del rombo son bisectrices de los ángulos que unen
+    \end{enumerate}
 }
 
 $$\boxed{A = \frac{D \cdot d}{2}}$$
