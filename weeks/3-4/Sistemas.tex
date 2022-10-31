@@ -1,0 +1,179 @@
+\chapter*{Sistemas}
+\setcounter{chapter}{1}
+\setcounter{section}{0}
+
+\section{Definición}
+\blueBox{Definición (Ecuación lineal)}{
+    Las ecuaciones que se pueden expresar en la forma
+    $$a_1x_1 + a_2x_2 + \dots + a_nx_n = b$$
+    donde $a_1, a_2, \dots, a_n \text{ y } b$ son constantes $\R$, se conocen como \emph{ecuaciones lineales con n incógnitas}. $x_1, x_2, \dots x_n$ son las \emph{n} incógnitas de la ecuación
+}
+
+\textbf{Ejemplo:}
+$$
+\begin{cases}
+    -3x + y &= -2\\
+    \phantom{-3}x + y &= \phantom{-}6
+\end{cases}
+$$
+Para resolver este sistema hay que encontrar el par de números $(x, y)$ que satisfagan las dos ecuaciones simultaneamente. \\
+Si las ecuacciones representan un par de rectas diferentes y paralelas, el sistema \textbf{no tiene solución}. Si representan un par de rectas no paralelas, el sistema tiene \textbf{una solución única} y cuando las ecuaciones representan la misma recta, el sistema tiene \textbf{infinitas soluciones}.
+
+\blueBox{Definición (sistemas de ecuaciones lineales)}{
+    Un sistema de ecuaciones lineales es un conjunto de ecuaciones lineales con la misma cantidad de incógnitas.
+
+    $$
+        \begin{cases}
+            a_{11}x_1 + a_{12}x_2 + \dots + a_{1n}x_n &= b_1\\
+            a_{21}x_1 + a_{22}x_2 + \dots + a_{2n}x_n &= b_2\\
+            \vdots\\
+            a_{m1}x_1 + a_{m2}x_2 + \dots + a_{mn}x_n &= b_m
+        \end{cases}
+    $$
+    donde $a_{ij}, b_i \in \R$ y $x_1, x_2, \dots, x_n$ son las incógnitas del sistema. $a_{ij}$ son los \emph{coeficientes del sistema} y $b_i$ son los \emph{términos independientes}.
+}
+
+\section{Sistemas de ecuaciones equivalentes}
+Para resolver el un sistema lineal 2 × 2 podemos ver el siguiente ejemplo:
+$$
+\begin{cases}
+    3x - y &= -1\\
+    \phantom{3}x + y &= \phantom{-}5
+\end{cases}
+$$
+tiene como solución $x = 1$ e $y = 4$. \\
+Vamos a "combinar" las ecuaciones del sistema para obtener una nueva ecuación: multiplicamos la segunda ecuación por 2 y la restamos a la primera:
+$$
+\begin{aligned}
+    3x - y &= -1\\
+    2x + 2y &= 10\\
+    \hline
+    x-3y &= -11
+\end{aligned}
+$$
+Esta ecuación es equivalente al sistema original, ya que si resolvemos esta ecuación, obtenemos la misma solución que el sistema original. \\
+
+\blueBox{Definición (combinación lineal de ecuaciones)}{
+    Sean $E_1$ y $E_2$ dos ecuaciones lineales con la misma cantidad de incógnitas. Se dice que la ecuación $E$ es \emph{combinación lineal} de las ecuaciones $E_1$ y $E_2$ si existen números reales $\alpha$ y $\beta$ tales que:
+    $$E = \alpha E_1 + \beta E_2$$ 
+}
+
+\blueBox{Teorema}{
+    Dos sistemas lineales tienen exactamente el mismo conjunto solución.
+}
+
+\section{Resolución de los sistemas lineales: Eliminación de Gauss}
+Para resolver un sistema de ecuaciones lineales, podemos usar el método de eliminación de Gauss, que nos permite simplificar las ecuaciones equivalentemente mediante 3 operaciones:
+\begin{enumerate}
+    \item Intercambiar dos ecuaciones
+    \item Multiplicar una ecuación por un número real distinto de 0
+    \item Sumar una ecuación a otra multiplicada por un número real
+\end{enumerate}
+
+\noindent \textbf{Ejemplo:} \emph{Resuelvan el sistema:}
+$$
+\begin{cases}
+        -2x + 5y &= 4\\
+        \phantom{-}3x + 2y &= 13
+\end{cases}
+$$
+
+Para resolverlo vamos a usar la primera ecuación para eliminar la incógnita $x$ de la segunda ecuación. En este caos multiplicaremos la primera ecuación por 3 y la segunda por 2
+
+$$
+\begin{cases}
+        -2x + 5y &= 4\\
+        \phantom{-}3x + 2y &= 13
+\end{cases}
+\rightarrow
+\begin{cases}
+-6x + 15y & = 12 \\
+\phantom{-}6x + 4y & = 26
+\end{cases}
+$$
+
+Ahora sumamos la segunda ecuación a la primera:
+$$
+\begin{cases}
+        -2x + 5y &= 4\\
+        \phantom{-}3x + 2y &= 13
+\end{cases}
+\rightarrow
+\begin{cases}
+-6x + 15y & = 12 \\
+\phantom{-}6x + 4y & = 26
+\end{cases}
+\rightarrow
+\begin{cases}
+-6x + 15y & = 12 \\
+\phantom{-6x + }19y & = 38
+\end{cases}
+$$
+Los 3 sistemas tienen el mismo conjunto solución, pero el tercero nos da la solución inmediata:
+$$
+19y = 38 \Leftrightarrow y = 2
+$$
+Reemplazando en la primera ecuación:
+$$
+-6x + 30 = 12 \Leftrightarrow -6x = -18 \Leftrightarrow x = 3
+$$
+La solución del sistema es $(x, y) = (3, 2)$
+
+\noindent \textbf{Ejemplo 2:} \emph{Resuelvan el sistema:}
+$$
+\begin{cases}
+        \phantom{-}2x + y + z &= \phantom{-}2 \quad (E_1)\\
+        -x - y + 2z &= \phantom{-}6 \quad  (E_2)\\
+        3x + 2y + z &= -4 \quad  (E_3)
+\end{cases}
+$$
+
+Vamos a buscar un sistema equivalente pero que en las ecuaciones ($E_2$) y ($E_3$) no tenga $x$
+
+$$
+(A)
+\begin{cases}
+        \phantom{-}2x + y + z &= \phantom{-}2 \quad (E_1)\\
+        -x - y + 2z &= \phantom{-}6 \quad  (E_2)\\
+        3x + 2y + z &= -4 \quad  (E_3)
+\end{cases}
+\rightarrow
+(A')
+\begin{cases}
+    \phantom{-}2x + y + z &= \phantom{-}2 \quad (E_1)\\
+    - y + 5z &= 14 \quad  (E^'_2 = 2E_2 + E_1)\\
+    y - z &= -14 \quad  (E^'_3 = 2E_3 -3E_1)
+\end{cases}
+$$
+Por último, operando con las ecuaciones $E^'_2$ y $E^'_3$ vamos a obtener el tercer sistema equivalente, pero solo con una incógnita:
+$$
+(A') 
+\begin{cases}
+    \phantom{-}2x + y + z &= \phantom{-}2 \quad (E_1)\\
+    - y + 5z &= 14 \quad  (E^'_2 = 2E_2 + E_1)\\
+    y - z &= -14 \quad  (E^'_3 = 2E_3 -3E_1)
+\end{cases}
+\rightarrow
+(A'')
+\begin{cases}
+    \phantom{-}2x + y + z &= \phantom{-}2 \quad (E_1)\\
+    \ - y + 5z &= 14 \quad  (E^'_2)\\
+    4z &= 0 \quad  (E^{''}_3 = E^'_2 + E^'_3)
+\end{cases}
+$$
+La última ecuación nos da un resultado inmediato:
+$$
+4z = 0 \Leftrightarrow \boxed{z = 0}
+$$
+Reemplazando en la segunda ecuación:
+$$
+- y + 5z = 14 \Leftrightarrow - y + 5(0) = 14 \Leftrightarrow - y = 14 \Leftrightarrow \boxed{y = -14}
+$$
+Reemplazando en la primera ecuación:
+$$
+2x + (-14) + 0 = 2 \Leftrightarrow 2x = 16 \Leftrightarrow \boxed{x = 8}
+$$
+El sistema tiene una única solución: $(x, y, z) = (8, -14, 0)$
+
+\section{Clasificación de los sistemas lineales}
+Los sistemas pueden tener o no solución. Cuando un sistema tiene solución es \textbf{comptabile}. En este caso puede tener una única solución o infinitas. Cuando tiene una sola solución es \textbf{compatible determinado} y cuando tiene infinitas soluciones es \textbf{compatible indeterminado}. Cuando un sistema no tiene solución es \textbf{incompatible}.

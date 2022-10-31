@@ -1,0 +1,151 @@
+\chapter*{Polinomios}
+\setcounter{chapter}{1}
+\setcounter{section}{0}
+
+\section{Definición}
+\blueBox{Definición de polinomio}{
+    Se llama \emph{polinomio de grado n} a toda expresión de la forma 
+    $$p(x) = a_n x^n + a_{n-1} x^{n-1} + \dots + a_1 x + a_0$$
+    donde $n \in \N_0, a_0, a_1, \dots a_n \in \R$ y $a_n \neq 0$.\\
+    $a_n$ es el \emph{coeficiente principal} y $a_0$ el \emph{coeficiente independiente}.
+}
+
+\yellowBox{Polinomio Nulo}{
+    Se llama \emph{polinomio nulo} a todo polinomio que es igual a cero, es decir, que su coeficiente independiente es cero.
+    $$p(x) = 0$$
+    Este polinomio \textbf{no tiene grado}.
+}
+
+\blueBox{Definición de la \textbf{igualdad de polinomios}}{
+    Dos polinomios son $p(x)$ y $q(x)$ son iguales si son del mismo grado y los coeficientes de los términos de igual grado son iguales:
+    $$p(x) = a_nx^n + a_{n-1}x^{n-1} \dots + a_1x + a_0 \text{ y } q(x) = b_nx^n + b_{n-1}x^{n-1} \dots + b_1x + b_0$$ 
+    son polinomios de grado \emph{n}, son iguales sí y solo si:
+    $$a_n = b_n;a_{n-1} = b_{n-1};\dots;a_1 = b_1 = a_0 = b_0$$
+    o, abreviada:
+    $$a_i = b_i \text{ para } i = 0,1,2,\dots, n$$
+}
+
+\blueBox{Suma de polinomios}{
+    La suma de dos polinomios de grado $n$ y $m$ es un polinomio de grado $max(n,m)$:
+    $$p(x) + q(x) = (a_nx^n + a_{n-1}x^{n-1} + \dots + a_1x + a_0) + (b_mx^m + b_{m-1}x^{m-1} + \dots + b_1x + b_0)$$
+    $$p(x) + q(x) = (a_n + b_m)x^n + (a_{n-1} + b_{m-1})x^{n-1} + \dots + (a_1 + b_1)x + (a_0 + b_0)$$
+}
+
+\blueBox{Opuesto de un polinomio}{
+    Un polinomio es el opuesto de otro cuando la suma de ambos es el polinomio nulo:
+    $$\text{El opuesto del polinomio } p(x) = a_nx^n + \dots + a_1x + a_0 \text{ es}$$
+    $$-p(x) = -a_nx^n - \dots - a_1x - a_0$$
+}
+
+\blueBox{Resta de polinomios}{
+    Dados dos polinomios $p(x)$ y $q(x)$, la resta de $p - q$ es el polinomio que se obtiene al sunarle a $p$ el opuesto de $q$:
+    $$p(x) - q(x) = p(x) + (-q(x))$$ 
+    \tcblower
+    \textbf{Ejemplo:} calcular $p - q$ si $p(x) = 7x^2 + 3x - 1$ y $q(x) = -2x^3 + x^2 - 4x - 1$.\\
+    \textbf{Solución:} 
+    $$p(x) - q(x) = 7x^2 + 3x - 1 - (-2x^3 + x^2 - 4x - 1)$$
+    $$p(x) - q(x) = 7x^2 + 3x - 1 + 2x^3 - x^2 + 4x + 1$$
+    $$p(x) - q(x) = 2x^3 + 6x^2 + 7x$$ 
+}
+
+\blueBox{Multiplicación de polinomios}{
+    Dados dos polinomios $p(x)$ y $q(x)$, la multiplicación de $p * q$ se obtiene de distribuir los términos y sumar los coeficientes de igual grado.
+    \tcblower
+    \textbf{Ejemplo:} calcular $p * q$ si $p(x) = x^3 - 3x^2 + 2$ y $q(x) = 3x - 1$.\\
+    \textbf{Solución:} Primero se distribuyen los términos:
+    $$p(x) * q(x) = (x^3 - 3x^2 + 2)(3x - 1)$$
+    $$p(x) * q(x) = 3x^4 - 9x^3 + 6x - x^3 + 3x^2 - 2$$
+    \text{Y luego se suman los coeficientes de igual grado:}
+    $$p(x) * q(x) = 3x^4 - 10x^3 + 3x^2 + 6x - 2$$
+}
+
+\blueBox{Teorema (algoritmo de la división)}{
+    Si \emph{p(x)} y \emph{q(x)} son dos polinomios tales que \emph{q(x)} no es nulo y el grado de \emph{p} $greq$ al grado de \emph{q}, existen polinomoios \emph{c(x)} y \emph{r(x)} tales que:
+    $$p(x) = q(x) \cdot c(x) + r(x)$$
+    donde el grado de \emph{r} $<$ al grado de \emph{q} o \emph{r(x)} es el polinomio nulo.
+    El polinomio \emph{c(x)} se llama \emph{cociente} y el polinomio \emph{r(x)} se llama \emph{resto}.
+}
+
+\section{Ceros o raíces de un polinomio}
+\blueBox{Valor numérico de un polinomio}{
+    El \emph{valor numérico} del polinobio \emph{p(x)} en el punto \emph{x = k} es el número \emph{p(k)}.
+    \tcblower
+    El \emph{cero} o \emph{raíz} de un polinomio es el valor numérico de \emph{x} que hace que el polinomio tome el valor \emph{0}.
+}
+
+\blueBox{Teorema del resto}{
+    El resto de dividir a \emph{p(x)}  por un polinomio  de la forma \emph{x - k}, donde $k \in \R$, es \emph{p(k)}.
+}
+\emph{Ejemplo:} Calcular el resto de dividir $p(x) = -x^4 - 2x^3 + 3x^2 + x + 1$ por $x+1$.\\
+\emph{Solución:} El resto es $p(-1) = 4$.
+
+\section{Factorización de polinomios}
+\blueBox{Definición - Factorización de polinomios}{
+    Un polinomio \emph{p(x)} de grado $\geq$ 1 es irreducible si cualquier factorización de \emph{p(x)} es de la forma \emph{p(x) = q(x) * r(x)}, donde \emph{q(x)} o \emph{r(x)} son polinomios de grado 0.\\
+    \textbf{Un polinomio es irreducible si y solo si es de grado 1 o es un polinomio de grado 2 sin raíces}
+    \tcblower
+    Para factorizar un polinomio \emph{p(x)} hay que escribirlo como el producto de su \textbf{Coeficiente principal} y una cantidad de factores irreducibles y mónicos. 
+}
+\emph{Ejemplo:} El polinomio \emph{p(x) = 2x^3 + 3x^2 -2x -3} se factoriza como:
+$$p(x) = 2(x-1)(x+1)\left(x+\frac{3}{2}\right)$$
+
+\blueBox{Multiplicidad de una raíz}{
+    Decimos que \emph{a} es raíz de \emph{p(x)} de multiplicidad \emph{k} si $(x-a)^k$ divide a \emph{p(x)} y $(x-a)^{k+1}$ \textbf{no} divide a \emph{p(x)}.\\
+    Si $k = 1$ decimos que \emph{a} es raíz simple de \emph{p(x)}.
+}
+
+\blueBox{Teorema}{
+    Sea \emph{p(x)} un polinomio de grado \emph{n}. Si \emph{p(x)} tiene \emph{n} raíces, se puede escribir de la forma:
+    $$p(x) = (x-a_1)^{m_1} \cdot (x-a_2)^{m_2} \cdot \cdots \cdot (x-a_n)^{m_n}$$
+    donde $a_i$ son las raíces de \emph{p(x)} y $m_i$ son las multiplicidades de las raíces.
+}
+
+\section{Expresiones racionales}
+Las expresiones racionales es como el "conjunto de fracciones de polinomios"
+\blueBox{Definición}{
+    Se llama \emph{expresión racional} a toda fracción de la forma:
+    $$\frac{P(x)}{Q(x)}$$
+    donde \emph{P(x)} y \emph{Q(x)} son polinomios con coeficientes en $\R$ y \emph{Q(x)} no es un polinomio nulo.
+}
+
+\chapter*{Operaciones con expresiones racionales}
+
+\begin{enumerate}
+    \item \textbf{Multiplicación:} \\
+    Dadas dos expresiones racionales $\frac{p_1(x)}{q_1(x)}$ y $\frac{p_2(x)}{q_2(x)}$, su producto es:
+    $$\frac{p_1(x)}{q_1(x)} \cdot \frac{p_2(x)}{q_2(x)} = \frac{p_1(x) \cdot p_2(x)}{q_1(x) \cdot q_2(x)}$$
+    \textbf{Ejemplo:}
+    $$\frac{x+1}{x^2-4} \cdot \frac{3}{x-1} = \frac{3x+3}{x^3-x^2-4x+4}$$
+    \item {\textbf{División:} \\
+    Al igual que con los números racionales, la división de expresiones racionales se realiza multiplicando las expresiones de manera inversa:
+    $$\frac{p_1(x)}{q_1(x)} : \frac{p_2(x)}{q_2(x)} = \frac{p_1(x)}{q_1(x)} \cdot \frac{q_2(x)}{p_2(x)} = \frac{p_1(x) \cdot q_2(x)}{q_1(x) \cdot p_2(x)}$$
+    \textbf{Ejemplo:}
+    $$\frac{x^2 + 1}{x} : \frac{3x}{x-1} = \frac{x^2 + 1}{2} \cdot \frac{x-1}{3x} = \frac{x^3 -x^2 + x - 1}{3x^2}$$}
+    Para la suma y la resta necesitamos que los denominadores sean iguales, por lo que se puede usar la \textbf{regla de la igualdad de los denominadores (mcm)}:
+    \blueBox{Definición - mcm}{
+        Un mínimo común múltiplo \emph{(mcm)} entre dos polinomios p y q de grado es un polinomio m de grado mínimo que es múltiplo de p y de q.
+        \tcblower
+        Se factorizan los denominadores y se multiplican los factores comunes de mayor grado y los no comunes
+    }
+    \textbf{Ejemplo:} Encontrar un \emph{mcm} entre $p(x) = 2x^3 + 6x^2 -2x -6$ y $q(x) = x^4 + 5x^3 + 3x^2 - 9x$\\
+    Primero tenemos que factorizar los polinomios
+    $$p(x) = 2(x-1)(x+1)(x+3) \text{ y } q(x) = (x+3)^2(x-1)x$$
+    por ende, el \emph{mcm} es:
+    $$m(x) = (x-1)(x+1)(x+3)^2x$$
+    \item \textbf{Suma y resta:} \\
+    Para la suma y la resta, hay que igualar los denominadores y luego sumar o restar los numeradores.
+\end{enumerate}
+
+\section{Ecuaciones racionales}
+Son ecuaciones donde la incógnita está en una expresión fraccionaria. La idea es tranformar la ecuación en una ecuación polinómica y después resolverla igualando a 0 para encotrar sus raíces \vspace{1em}\\ 
+\textbf{Ejemplo:} Resolver la siguiente ecuación:
+$$\frac{2x+1}{x-3} = \frac{x-7}{x-1}$$
+Hay valores que no pueden ser raíces, porque no están definidos en el dominio de la función. Por ejemplo, $x = 3$ y $x=1$ no puede ser raíz porque $x-3 = 0$ y $x+1 = 0$ y $0$ no está definido en $\R$.\\
+$$x \neq 3 \text{ y } x \neq 1$$
+\begin{gather*}
+{\frac{2x+1}{x-3} = \frac{x-7}{x-1} \Leftrightarrow (2x+1)(x-1) = (x-7)(x-3) \Leftrightarrow} \\
+{2x^2 + x - 1 = x^2 - 3x - 7x + 21 \Leftrightarrow x^2 + 9x - 22 = 0}
+\end{gather*}
+\begin{center}
+    $$\boxed{x = 2 \text{ y } x = -11}$$
+\end{center}
