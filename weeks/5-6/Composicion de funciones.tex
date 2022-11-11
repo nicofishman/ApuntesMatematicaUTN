@@ -1,0 +1,73 @@
+\chapter*{Composición de funciones}
+\setcounter{chapter}{1}
+\setcounter{section}{0}
+
+\blueBox{Definición}{
+    Dadas dos funciones $f: A \rightarrow B$ y $g: B \rightarrow C$, la composición de $f$ y $g$ es la función $g \circ f$ definida por:
+    $$g \circ f: A \rightarrow C / (g \circ f)(x) = g(f(x))$$
+    No es necesario que el dominio de $g$ sea igual al codominio de $f$, pero sí que la imagen de la función $f$ esté contenida por el dominio de $g$.
+    $$Im(f) \subseteq Dom(g)$$
+    \tcblower
+    \textbf{Ejemplo}: determinar $f \circ g$ y $g \circ f$ de las funciones $f(x) = x^2 + 1$ y $g(x) = -2x + 6$.
+    \begin{enumerate}
+        \item {Aplicamos la definición:
+        $$(f \circ g)(x) = f(g(x))$$
+        $$x \rightarrow g(x) \rightarrow f(g(x)) = (g(x))^2 + 1$$
+        $$x \rightarrow (-2x+6) \rightarrow (-2x+6)^2 + 1$$
+        por ende:
+        $$(f \circ g)(x) = 4x^2 -24x +37$$
+        }
+        \item{Haciendo lo mismo para el otro lado:
+        $$g \circ f: \R \rightarrow \R / (g \circ f)(x) = -2x^2 + 4$$
+        }
+    \end{enumerate}
+}
+
+\section{La función identidad}
+Dado un conjunto cualquiera, la función que le asigne como imagen el mismo valor que el que recibe se llama función identidad y se denota por $Id_A$.
+$$id_A : A \rightarrow A / id_A(x) = x$$
+En los números reales la función es:
+$$y = x$$
+y su gráfica es la bisectriz del primer y tercer cuadrante.
+
+\blueBox{Propiedad}{
+    Si $f: A \rightarrow B$ es una función biyectiva entonces se tiene que:
+    \begin{enumerate}
+        \item $f \circ f^{-1} : B \rightarrow B / (f \circ f^{-1})(x) = x$ es la función $id_B$
+        \item $f \circ f^{-1} : A \rightarrow A / (f^{-1} \circ f)(x) = x$ es la función $id_A$
+    \end{enumerate}
+}
+\section{Paridad e imparidad de una función}
+Se dice que un dominio $D$ es \textbf{simétrico respecto del origen} si $x \in D$ y su opuesto, $-x$ también pertenece a $D$.
+
+\blueBox{Definición - Función par}{
+    Sea una función definida en un conjunto simétrico respecto del origen. $f$ es par si: 
+    $$f(-x) = f(x) \,\,\, \forall x \in Dom(f)$$
+    Las gráficas de las funciones pares son simétricas respecto al eje de ordenadas.
+    \tcblower
+    \textbf{Ejemplo}: La función $f(x) = \ln(x^4-16)$ es una función par:\\
+    La función está definida si
+    $$x^4 - 16 > 0 \Leftrightarrow x^4 > 16 \Leftrightarrow |x| > \sqrt[4]{16} \Leftrightarrow x < -2 \text{ o bien } > 2$$
+    El dominio es:
+    $$Dom(f) = (-\infty, -2) \cup (2, +\infty)$$
+    que es simétrico respecto del origen. Además:
+    $$f(-x) = \ln((-x)^4-16) = \ln(x^4-16) = f(x)$$
+}
+
+\blueBox{Definición - Función impar}{
+    Sea una función definida en un conjunto simétrico respecto del origen. $f$ es impar si:
+    $$f(-x) = -f(x) \,\,\, \forall x \in Dom(f)$$
+    Las gráficas de las funciones impares son simétricas respecto del centro de coordenadas. 
+    \tcblower
+    \textbf{Ejemplo}: La función $f: \R \rightarrow \R / f(x) = x^3$ es una función impar:
+    $$f(-x) = (-x)^3 = -x^3 = -f(x)$$
+}
+
+\section{Traslaciones verticales y horizontales}
+Las gráficas de una función se pueden trasladar verticalmente o horizontalmente. Esto se hace sumando o restando un número a la variable independiente o a la variable dependiente.
+\vspace{10pt}\\
+Sean $f$ y $g(x) = x+k$, con $k \in \R$ dos funciones para que se pueda definir $f \circ g$ y $g \circ f$:
+    $$(g \circ f)(x) = g(f(x)) = f(x) + k$$
+Es una traslación vertical de $k$ unidades (hacia arriba si $k > 0$, o hacia abajo si $k < 0$)
+    $$(f \circ g)(x) = f(g(x)) = f(x+k)$$
+Es una traslación horizontal de $k$ unidades (hacia la derecha si $k < 0$, o hacia la izquierda si $k > 0$)

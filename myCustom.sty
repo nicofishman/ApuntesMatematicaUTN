@@ -6,9 +6,10 @@
 \usepackage{graphicx}
 \usepackage{fancyvrb}
 \usepackage{multicol}
-\usepackage{tcolorbox}
+\usepackage[most]{tcolorbox}
 \usepackage{tikz,lipsum,lmodern}
 \usepackage{breqn}
+\usepackage{empheq}
 \usepackage{pgfplots}
 \usepackage{cases}
 \usepackage{polynom}
@@ -18,6 +19,11 @@
 \pgfplotsset{compat=1.18}
 
 
+\newtcbox{\mymath}[1][]{%
+    nobeforeafter, math upper,
+    enhanced, colframe=blue!30!black,
+    colback=blue!30, boxrule=1pt,
+    #1}
 
 
 \newcommand{\R}{{\mathbb{R}}}
